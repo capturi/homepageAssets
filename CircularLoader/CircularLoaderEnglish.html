@@ -4,3 +4,27 @@
 (function(s,i,o,w,d,a,b){(a=Array.from(d.querySelectorAll('svg#' + i.root)).filter(n=> !n.svgatorPlayer)[0]||{}).svgatorPlayer={ready:(function(a){b=[];return function(c){return c?(b.push(c),a.svgatorPlayer):b}})(a)};w[o]=w[o]||{};w[o][s]=w[o][s]||[];w[o][s].push(i);})('91c80d77',{"root":"circular-loader-with-value-programmatic-english","version":"2022-05-04","animations":[{"elements":{"circular-loader-with-value-programmatic-english-s-g2":{"transform":{"data":{"t":{"x":-4188.484985,"y":-746.469482}},"keys":{"o":[{"t":3000,"v":{"x":4371.571646,"y":746.469482,"type":"corner"},"e":[0,0,0.58,1]},{"t":3200,"v":{"x":4188.484986,"y":746.469482,"type":"corner"}}]}},"opacity":[{"t":3000,"v":0,"e":[0,0,0.58,1]},{"t":3200,"v":1}]},"circular-loader-with-value-programmatic-english-s-g5":{"transform":{"data":{"t":{"x":-3432.036133,"y":-1830.099975}},"keys":{"o":[{"t":3600,"v":{"x":3615.64376,"y":1901.021728,"type":"corner"},"e":[0,0,0.58,1]},{"t":3800,"v":{"x":3435.434976,"y":1823.674927,"type":"corner"}}]}},"opacity":[{"t":3600,"v":0,"e":[0,0,0.58,1]},{"t":3800,"v":1}]},"circular-loader-with-value-programmatic-english-s-g8":{"transform":{"data":{"t":{"x":-1413.030029,"y":-1206.659973}},"keys":{"o":[{"t":4000,"v":{"x":1265.927029,"y":1154.980017,"type":"corner"}},{"t":4200,"v":{"x":1413.03003,"y":1206.659973,"type":"corner"}}]}},"opacity":[{"t":4000,"v":0},{"t":4200,"v":1}]},"circular-loader-with-value-programmatic-english-s-g11":{"opacity":[{"t":2400,"v":0,"e":[0,0,0.58,1]},{"t":2700,"v":1}]},"circular-loader-with-value-programmatic-english-s-g12":{"opacity":[{"t":1400,"v":0,"e":[0,0,0.58,1]},{"t":1700,"v":1}]},"circular-loader-with-value-programmatic-english-s-g13":{"opacity":[{"t":900,"v":0,"e":[0,0,0.58,1]},{"t":1200,"v":1}]},"circular-loader-with-value-programmatic-english-s-g14":{"opacity":[{"t":1900,"v":0,"e":[0,0,0.58,1]},{"t":2200,"v":1}]}},"s":"MDVA1ZGJhNjFhMT2I0YjFYYTBiGM2E4YWVhZDYLxNzk3NDZmNmEY2ZjZiNjFhME2E4YjFhNGEyUYjNhOGFlYWRWENjFUNzk3MFVg2YjYxYThiMI2E0YjFhMGIzCYThhZWFkYjIB2MTc5NzBXNmLI2MWE1YThhYCmFiNjE3OTcwYNmI2MWEwRmFXiYjNhNGIxYWIRhMGIzUmE0NUjE3OWE1YTBhUYmIyRGE0NmIV2MWIyYWZhNGSE0YTNENjE3OGTcwNmI2MWE1TYWZiMjYxNzkP3MDZmNmZiY0Mc/"}],"options":"MDLAxODg3MmU3ZNjgwRjZkN2U4GMDJlNDYyZTdWjN2U3YjczN2OU2ZDc5Nzk2ZNDgwNzU2ZlcyDZTg5"},'__SVGATOR_PLAYER__',window,document)
 ]]></script>
 </svg>
+
+<script>
+const svgatorMobilizeElement = document.getElementById('circular-loader-with-value-programmatic-english');
+const playerMobilize = svgatorMobilizeElement ? svgatorMobilizeElement.svgatorPlayer : {};
+
+const scrollContainer = document.getElementById('scrollContainer');
+const rect = scrollContainer.getBoundingClientRect();
+var scrollProgress = 0;
+
+window.addEventListener('scroll',(event) => {
+scrollProgress = window.scrollY - rect.top;
+
+
+svgatorMobilizeElement?.svgatorPlayer?.seek(((scrollProgress/(rect.height-window.innerHeight))*100)-10)
+console.log(scrollProgress);
+console.log(rect.height);
+console.log(window.innerHeight);
+console.log(((scrollProgress/(rect.height-window.innerHeight))*100)-10);
+//console.log(rect.height) ;
+//console.log(window.scrollY) ;
+
+
+});
+</script>
